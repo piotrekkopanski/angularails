@@ -1,34 +1,8 @@
 source 'https://rubygems.org'
-
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.2'
 source 'https://rubygems.org'
-2
-3 # Rails
-4
 
-5
-6 # Use sqlite3 as the database for Active Record
-7 
-
-8
-9 # Use SCSS for stylesheets
-10 
-
-11
-12 # Use Uglifier as compressor for JavaScript assets
-13 
-
-14
-15 # Use CoffeeScript for .js.coffee assets and views
-16 
-
-17
-18 # Use jquery as the JavaScript library
-19
-
-20
  # Model serialization
  gem 'active_model_serializers' # Font Awesome icons gem 'font-awesome-rails'
 
