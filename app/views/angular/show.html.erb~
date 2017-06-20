@@ -1,0 +1,54 @@
+<p>Click the table headers to change the sorting order:</p>
+
+<div ng-app="myApp" ng-controller="namesCtrl">
+  <h1>{{myHeader}}</h1>
+    <p>Search word with--><input type="text" ng-model="test"></p>
+
+    <table border="1" width="100%">
+      <tr>
+        <th> # </th>
+        <th ng-click="orderByMe('name')">Name</th>
+        <th ng-click="orderByMe('country')">Country</th>
+      </tr>
+      <tr ng-repeat="x in names | orderBy:myOrderBy | filter:test">
+        <td>{{ $index + 1 }}</td>
+        <td>{{x.name}}</td>
+        <td>{{x.country}}</td>
+      </tr>
+    </table>
+
+  <h1 ng-click="changeName()">Click --> {{firstname}}</h1>
+
+  <button ng-click="myFunc()">Click Me!</button>
+
+  <div ng-show="showMe">
+    <h1>Menu:</h1>
+    <div>Pizza</div>
+    <div>Pasta</div>
+    <div>Pesce</div>
+  </div>
+  
+  <div  class="card" >
+  <header class="header">
+    <h3>My Shopping List</h3>
+  </header>
+  <ul >
+    <li ng-repeat="x in products">{{x}}<span ng-click="removeItem($index)" ><button> <-- click me to delete</button> </span></li>
+  </ul>
+  <div >
+    <div >
+      <div>
+        <input placeholder="Add shopping items here" ng-model="addMe" class="w3-input w3-border w3-padding">
+      </div>
+      <div >
+        <button ng-click="addItem()" >Add</button>
+      </div>
+    </div>
+    <p >{{errortext}}</p>
+  </div>
+</div>
+
+</div>
+
+
+

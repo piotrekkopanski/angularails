@@ -1,0 +1,45 @@
+<div class="row" ng-app="AngulaRails" ng-controller="HelloWorldController">
+    <div class="col-md-6">
+        <h1>Hello AngularJS</h1>
+     <p>Type in the input box and watch as AngularJS updates the property through \
+                  the magic of binding.</p>
+     
+    <input type="text" class="form-control" ng-model="myText"  required>
+                      {{ myText }}
+    </div>
+
+     <div class="col-md-6">
+  <ul>
+    <li ng-repeat="phone in phones">
+      <span>{{phone.name}}</span>
+      <p>{{phone.snippet}}</p>
+    </li>
+  </ul>
+  <p>Total number of phones: {{phones.length}}</p>
+  <p>Hello {{name}}!</p>
+
+  <table>
+      <tr><th>Row number</th></tr>
+      <tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]"><td>{{i}}</td></tr>
+  </table>
+
+  <table >
+     <tr><th>Row number</th></tr>
+     <tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]"><td  ng-repeat="j in [0, 1, 2, 3, 4, 5, 6, 7]">demo</td></tr>            
+  </table>
+
+  <p>1 + 2 = {{1 + 2}}</p>
+
+  </div>
+ </div>
+</div>
+
+<style>
+input.ng-invalid {
+    background-color: lightblue;
+}
+</style>
+
+
+
+  

@@ -1,0 +1,19 @@
+app.controller('raffle', ['$scope', function($scope) {  
+ $scope.products =
+   [
+    { 
+      name: "Joe",
+      lastname: "Nork",
+      likes: 0
+    },
+    { 
+      name: "Fred",
+      lastname: "Mark",
+      likes: 0
+    }
+   ];
+  $scope.plusOne = 
+     function(index) {
+       $scope.product[index].likes += 1;
+     };
+}]);
